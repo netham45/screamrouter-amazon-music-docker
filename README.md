@@ -12,6 +12,6 @@ This container will output 16-bit 44.1kHz PCM audio encapsulated in an RTP strea
 
 1. Clone the repo ```git clone https://github.com/netham45/amazon-music-docker.git```
 2. Build the container image ```docker build amazon-music-docker/ -t amazon-music-docker```
-3. Make an instance of the container ```docker create amazon-music-docker```
+3. Make an instance of the container ```docker create -h "Amazon-Music" amazon-music-docker```
 4. Get the information on the container ```docker container inspect ...```
 4. Configure ScreamRouter ![Screenshot of Add Source Dialog](/images/config.png)
