@@ -1,7 +1,7 @@
 FROM i386/debian
 RUN sed -i 's/ main/ main contrib non-free security/g' /etc/apt/sources.list.d/* && \
     apt-get update -y && \
-    apt-get install -y tigervnc-standalone-server openbox gstreamer1.0-plugins-good avahi-daemon wget wine32 pulseaudio winetricks && \
+    apt-get install -y tigervnc-standalone-server openbox gstreamer1.0-plugins-good avahi-daemon netcat-openbsd xdotool wget wine32 pulseaudio winetricks && \
     rm -rf /var/lib/apt/lists
 RUN (winetricks -q allfonts --force || true)
 RUN Xtigervnc :0 & \

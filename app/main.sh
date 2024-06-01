@@ -9,6 +9,7 @@ Xtigervnc -desktop "$VNC_DESKTOP_NAME" -geometry "$VNC_GEOMETRY" -listen tcp -ac
 sleep 2
 export DISPLAY=:0.0
 openbox &
+/app/media_keys.sh &
 
 winetricks ddr=gdi
 while x=x
